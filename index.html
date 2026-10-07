@@ -311,12 +311,6 @@
       </div>
     </div>
     <div class="dl-section">
-      <div class="dl-section-title">📚 AI융합교과목개발비</div>
-      <div class="dl-list">
-        <a class="dl-btn" href="files/AI융합교과목개발 신규 및 고도화 결과보고서.hwp" download>⬇ AI융합교과목개발 신규 및 고도화 결과보고서</a>
-      </div>
-    </div>
-    <div class="dl-section">
       <div class="dl-section-title">🎓 강사료</div>
       <div class="dl-list">
         <a class="dl-btn" href="files/강사료 지급기준.hwp" download>⬇ 강사료 지급기준</a>
@@ -392,22 +386,6 @@
       ]
     },
     {
-      id: "gyogwamokgaebalbi", icon: "📚", name: "AI융합교과목개발비", sub: "교과목 개발 관련 지급 기준",
-      checks: [
-        { label: "해당 교과목 개발 결과보고서", tags: ["필수", "지정양식"] },
-      ],
-      warns: [
-                { text: "AI융합교과목 신규 개발 : 200만원 이내 &nbsp;|&nbsp; 고도화 : 100만원 이내", danger: false },
-                { text: "결과보고서 신규개발 40페이지 이상, 고도화 교과목 20페이지 이상 작성", danger: false },
-        { text: "교과목개발비 지급 전 반드시 개발 완료 확인", danger: false },
-        { text: "동일인에게 연간 지급 한도 초과 여부 확인 필수", danger: false },
-        { text: "🚫 미완료 교과목에 대한 선지급 절대 불가", danger: true },
-      ],
-      downloads: [
-        { label: "AI융합교과목개발 신규 및 고도화 결과보고서", file: "files/AI융합교과목개발 신규 및 고도화 결과보고서.hwp" },
-      ]
-    },
-    {
       id: "gangsaryo", icon: "🎤", name: "강사료", sub: "강의 및 특강 강사 지급 기준",
       checks: [
         { label: "강사료 지급 내역서 및 신청서", tags: ["필수", "지정서식"] },
@@ -471,19 +449,6 @@
       ]
     },
     {
-      id: "yeobi", icon: "✈️", name: "여비(출장비)", sub: "출장 관련 지급 기준",
-      checks: [
-        { label: "대학 자체 규정 준용 지급.", tags: ["필수"] },
-        { label: "출장품의 및 지급명세서(종합정보시스템을 통하여 사전신청, 총무인사팀 접수까지 완료", tags: ["필수", "공통"] },
-        { label: "출장 확인서 (공문, 초청장 등)", tags: ["필수", "공통"] },
-      ],
-      warns: [
-{ text: "<span style='color:#e53e3e; font-weight:bold;'>출장 전 종합정보시스템 출장신청 필수_사후 처리 불가</span>", danger: false },
-        { text: "국외 출장 시 사전 문의하여 주시기 바랍니다.", danger: false },
-      ],
-      downloads: [  ]
-    },
-    {
       id: "yuuisahang", icon: "📌", name: "지출품의시<br>유의사항", sub: "지출 전 반드시 확인하세요",
       checks: [ 
         { label: "회계구분 : 비등금회계 및 발의부서 (17602) RISE(AI관련학과) 확인", tags: ["필수"] },
@@ -540,8 +505,8 @@
     document.getElementById('tab-' + tab).classList.add('active');
   }
 
-  const MAIN_IDS = ["wongolyo", "gyogwamokgaebalbi", "gangsaryo", "hoeuibi", "jamunryo"];
-  const SUB_IDS = ["yeobi", "yuuisahang", "jiphaenggijeun"];
+  const MAIN_IDS = ["wongolyo", "gangsaryo", "hoeuibi", "jamunryo"];
+  const SUB_IDS = ["yuuisahang", "jiphaenggijeun"];
 
   function renderGrid() {
     const grid = document.getElementById("itemGrid");
