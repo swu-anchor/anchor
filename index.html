@@ -305,12 +305,6 @@
 
     <!-- ━━ 여기서 서식 파일 추가/수정 가능 ━━ -->
     <div class="dl-section">
-      <div class="dl-section-title">📝 원고료</div>
-      <div class="dl-list">
-        <a class="dl-btn" href="files/원고료지급기준.hwp" download>⬇ 원고료지급기준</a>
-      </div>
-    </div>
-    <div class="dl-section">
       <div class="dl-section-title">🎓 강사료</div>
       <div class="dl-list">
         <a class="dl-btn" href="files/강사료 지급기준.hwp" download>⬇ 강사료 지급기준</a>
@@ -379,41 +373,6 @@
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   const ITEMS = [
     {
-      id: "wongolyo", icon: "📝", name: "원고료", sub: "원고 작성 관련 지급 기준",
-      checks: [
-        { label: "해당 원고 증빙 (제목·분량 포함)", tags: ["필수", "자유양식"] },
-      ],
-      warns: [
-        { text: "원고료 지급 전 반드시 원고 완료 확인", danger: false },
-        { text: "동일인에게 연간 지급 한도 초과 여부 확인 필수", danger: false },
-        { text: "🚫 미완료 원고에 대한 선지급 절대 불가", danger: true },
-      ],
-      downloads: [
-        { label: "원고료지급기준", file: "files/원고료지급기준.hwp" },
-      ]
-    },
-    {
-      id: "gangsaryo", icon: "🎤", name: "강사료", sub: "강의 및 특강 강사 지급 기준",
-      checks: [
-        { label: "강사료 지급 내역서 및 신청서", tags: ["필수", "지정서식"] },
-        { label: "강의계획서", tags: ["필수"] },
-        { label: "강사 이력서(경력사항 필수)", tags: ["필수"] },
-        { label: "참석자 명단", tags: ["필수", "자유양식"] },
-        { label: "강사 통장사본 및 신분증 사본", tags: ["필수"] },
-      ],
-      warns: [
-        { text: "강사료 지급 기준 단가 확인 후 집행", danger: false },
-                { text: "1일 최대 6시간, 1학기 최대 4회로 제한(타 재정지원사업 포함)", danger: false },
-        { text: "참석자 명단 자유양식", danger: false },
-        { text: "⚠️ 사전 승인 없는 강사 변경 불가", danger: false },
-        { text: "🚫 현금 지급 절대 불가 — 반드시 계좌이체", danger: true },
-      ],
-      downloads: [
-        { label: "강사료 지급기준", file: "files/강사료 지급기준.hwp" },
-        { label: "강사료 지급 서식", file: "files/강사료 지급 서식.hwp" },
-      ]
-    },
-    {
       id: "hoeuibi", icon: "🗣️", name: "회의비/간담회", sub: "<span style=\"background:#FAECE7; color:#4A1B0C; font-weight:700; padding:2px 6px; border-radius:4px;\">1인당 30,000원 이내</span>",
       checks: [
         { label: "영수증 (<span style='color:#ef4444; font-weight:700'>반드시 보조금 카드(e나라도움)사용(개인법인카드 사용 불가)</span>)", tags: ["필수", "공통"] },
@@ -435,6 +394,27 @@
         { label: "회의비지침", file: "files/회의비지침.hwp" },
         { label: "회의록 및 참석자 서명부 서식", file: "files/회의록 및 참석자 서명부 서식.hwp" },
                 { label: "간담회 참석자 서명부 및 보고서 서식", file: "files/간담회 참석자 서명부 및 보고서 서식.hwp" },
+      ]
+    },
+    {
+      id: "gangsaryo", icon: "🎤", name: "강사료", sub: "강의 및 특강 강사 지급 기준",
+      checks: [
+        { label: "강사료 지급 내역서 및 신청서", tags: ["필수", "지정서식"] },
+        { label: "강의계획서", tags: ["필수"] },
+        { label: "강사 이력서(경력사항 필수)", tags: ["필수"] },
+        { label: "참석자 명단", tags: ["필수", "자유양식"] },
+        { label: "강사 통장사본 및 신분증 사본", tags: ["필수"] },
+      ],
+      warns: [
+        { text: "강사료 지급 기준 단가 확인 후 집행", danger: false },
+                { text: "1일 최대 6시간, 1학기 최대 4회로 제한(타 재정지원사업 포함)", danger: false },
+        { text: "참석자 명단 자유양식", danger: false },
+        { text: "⚠️ 사전 승인 없는 강사 변경 불가", danger: false },
+        { text: "🚫 현금 지급 절대 불가 — 반드시 계좌이체", danger: true },
+      ],
+      downloads: [
+        { label: "강사료 지급기준", file: "files/강사료 지급기준.hwp" },
+        { label: "강사료 지급 서식", file: "files/강사료 지급 서식.hwp" },
       ]
     },
     {
@@ -530,7 +510,7 @@
     document.getElementById('tab-' + tab).classList.add('active');
   }
 
-  const MAIN_IDS = ["wongolyo", "gangsaryo", "hoeuibi", "jamunryo", "mentoring", "yuuisahang", "jiphaenggijeun"];
+  const MAIN_IDS = ["gangsaryo", "hoeuibi", "jamunryo", "mentoring", "yuuisahang", "jiphaenggijeun"];
   const SUB_IDS = [];
 
   function renderGrid() {
